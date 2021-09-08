@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import {Input, Flex, Button,FormLabel} from '@chakra-ui/react'
 
 export default function Conversor() {
   //Função Calcular do Botão
@@ -25,18 +26,53 @@ export default function Conversor() {
   const [total, setTotal] = useState(0);
   const [dados, setDados] = useState([]);
   return (
-    <>
+    <Flex>
+      <Flex
+        as="form"
+        width="30rem"
+        p="8"
+        borderRadius={8}
+        bg='Colors.red'
+        onSubmit={convert}
+        id="insert_form"
+        alignContent="center"
+        justifyContent="center"
+        m="130px auto"
+        pl='8px'
+        pt='80px'
+      >
+      
+        <Input
+          type="number"
+          inputMode="numeric"
+          onChange={(e) => setMoedaValor(e.target.value)}
+          placeholder="R$"
+          w='100px'
+          bg='Colors.softblue'
+        />
+        <Button ml='8' bg='Colors.green' color='white' type="submit" >
+          aperte
+        </Button>
+        <FormLabel fontSize='3rem' color='white' ml='-165px' mt='14'>$ {total.toFixed(2)}</FormLabel>
+      </Flex>
+      
       <p>Junkes-Conversor</p>
-      <input
-        type="number"
-        inputMode="numeric"
-        onChange={(e) => setMoedaValor(e.target.value)}
-        placeholder="R$"
-      />
-      <button type="button" onClick={convert}>
-        aperte
-      </button>
-      <label>total é {total.toFixed(2)}</label>
-    </>
+
+      
+    </Flex>
+    // <>
+    
+    //   <p>Junkes-Conversor</p>
+    //   <input
+    //     type="number"
+    //     inputMode="numeric"
+    //     onChange={(e) => setMoedaValor(e.target.value)}
+    //     placeholder="R$"
+    //   />
+    //   <button type="button" onClick={convert}>
+    //     aperte
+    //   </button>
+    //   <label>€ {total.toFixed(2)}</label>
+    // </>
   );
 }
