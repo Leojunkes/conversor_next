@@ -1,4 +1,14 @@
-import { Flex, Input, Button, FormLabel } from '@chakra-ui/react';
+/* eslint-disable @next/next/no-html-link-for-pages */
+import {
+  Tab,
+  Stack,
+  TabList,
+  Tabs,
+  Flex,
+  Input,
+  Button,
+  FormLabel,
+} from '@chakra-ui/react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -25,7 +35,22 @@ export default function Conversor() {
   const [total, setTotal] = useState(0);
   const [dados, setDados] = useState([]);
   return (
-    <Flex>
+    <>
+      <Flex height="4rem" bg="Colors.gray">
+        <Tabs mt="2" variant="soft-rounded" colorScheme="none">
+          <TabList ml="4">
+            <Stack direction="row" spacing="12px">
+              <a href="/">
+                <Tab>Home</Tab>
+              </a>
+
+              <a href="/euroBrl">
+                <Tab>Euro</Tab>
+              </a>
+            </Stack>
+          </TabList>
+        </Tabs>
+      </Flex>
       <Flex
         width="30rem"
         p="8"
@@ -37,15 +62,18 @@ export default function Conversor() {
         m="130px auto"
         pl="8px"
         pt="80px"
-        flexDirection='column'
+        flexDirection="column"
       >
+        <img
+          src="/imagens/usaFlag.png"
+          alt=""
+          style={{ height: '36px', width: '70px', marginTop: '-60px' }}
+        />
         <Flex
           as="form"
-         
           onSubmit={convert}
           alignContent="center"
           justifyContent="center"
-          
         >
           <Input
             type="number"
@@ -55,17 +83,32 @@ export default function Conversor() {
             w="100px"
             bg="Colors.softblue"
           />
-          <Button ml="8" bg="Colors.green" color="white" type="submit">
-            aperte
+          <Button
+            border="none"
+            ml="8"
+            bg="Colors.green"
+            color="white"
+            type="submit"
+          >
+            converter
           </Button>
-         
         </Flex>
-        <FormLabel p='4' m='auto' fontSize="3rem" color="white">
+        <Flex flexDirection="column">
+          <FormLabel p="4" m="auto" fontSize="3rem" color="white">
             $ {total.toFixed(2)}
           </FormLabel>
+          <img
+            style={{
+              height: '1px',
+              width: '200px',
+              marginLeft: '116px',
+              marginTop: '-25px',
+            }}
+            src="/imagens/linha.png"
+            alt=""
+          />
+        </Flex>
       </Flex>
-
-      <p>Junkes-Conversor</p>
-    </Flex>
+    </>
   );
 }
