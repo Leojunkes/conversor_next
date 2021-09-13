@@ -32,7 +32,7 @@ export default function Home() {
           marginTop="50px"
           gridAutoColumns="initial"
         >
-          <a href="http://localhost:3000/usdbrl">
+          <a href="https://junkes-conversor.vercel.app/usdbrl">
             <Flex
               fontSize="1.5rem"
               p="55px"
@@ -48,7 +48,7 @@ export default function Home() {
               <big>Dólar</big>
             </Flex>
           </a>
-          <a href="http://localhost:3000/euroBrl">
+          <a href="https://junkes-conversor.vercel.app/euroBrl">
             <Flex
               borderRadius="8"
               color="white"

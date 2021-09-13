@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
 import {
   Tab,
@@ -19,6 +20,7 @@ export default function Conversor() {
     const total = moedaValor * dados.USD_BRL;
     console.log(total);
     setTotal(total);
+    
   }
   //Chamando a API
   useEffect(() => {
@@ -44,7 +46,7 @@ export default function Conversor() {
                 <Tab>Home</Tab>
               </a>
 
-              <a href="/euroBrl">
+              <a href="https://junkes-conversor.vercel.app/euroBrl">
                 <Tab>Euro</Tab>
               </a>
             </Stack>
@@ -89,13 +91,14 @@ export default function Conversor() {
             bg="Colors.green"
             color="white"
             type="submit"
+            _hover="none"
           >
             converter
           </Button>
         </Flex>
         <Flex flexDirection="column">
           <FormLabel p="4" m="auto" fontSize="3rem" color="white">
-            $ {total.toFixed(2)}
+            US$ {total.toFixed(2)}
           </FormLabel>
           <img
             style={{

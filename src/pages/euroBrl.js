@@ -1,7 +1,17 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Tab,Stack,TabList,Tabs,Input, Flex, Button, FormLabel } from '@chakra-ui/react';
+import {
+  Tab,
+  Stack,
+  TabList,
+  Tabs,
+  Input,
+  Flex,
+  Button,
+  FormLabel,
+} from '@chakra-ui/react';
 
 export default function Conversor() {
   //Função Calcular do Botão
@@ -10,6 +20,8 @@ export default function Conversor() {
     const total = moedaValor * dados.EUR_BRL;
     console.log(total);
     setTotal(total);
+    
+    
   }
   //Chamando a API
   useEffect(() => {
@@ -27,7 +39,7 @@ export default function Conversor() {
   const [dados, setDados] = useState([]);
   return (
     <>
-    <Flex height="4rem" bg="Colors.gray">
+      <Flex height="4rem" bg="Colors.gray">
         <Tabs mt="2" variant="soft-rounded" colorScheme="none">
           <TabList ml="4">
             <Stack direction="row" spacing="12px">
@@ -35,7 +47,7 @@ export default function Conversor() {
                 <Tab>Home</Tab>
               </a>
 
-              <a href="/usdbrl">
+              <a href="https://junkes-conversor.vercel.app/usdbrl">
                 <Tab>Dólar</Tab>
               </a>
             </Stack>
@@ -80,14 +92,24 @@ export default function Conversor() {
             bg="Colors.green"
             color="white"
             type="submit"
+            _hover="none"
           >
             converter
           </Button>
-          </Flex>
-          <FormLabel p='4' m='auto' fontSize="3rem" color="white">
-            $ {total.toFixed(2)}
-          </FormLabel>
-          <img style={{height:'1px', width:'200px', marginLeft:'116px', marginTop:'-25px'}}  src="/imagens/linha.png" alt="" />
+        </Flex>
+        <FormLabel p="4" m="auto" fontSize="3rem" color="white">
+          € {total.toFixed(2)}
+        </FormLabel>
+        <img
+          style={{
+            height: '1px',
+            width: '200px',
+            marginLeft: '116px',
+            marginTop: '-25px',
+          }}
+          src="/imagens/linha.png"
+          alt=""
+        />
       </Flex>
     </>
   );
