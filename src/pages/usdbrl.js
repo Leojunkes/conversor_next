@@ -81,7 +81,7 @@ export default function Conversor() {
             type="number"
             inputMode="numeric"
             onChange={(e) => setMoedaValor(e.target.value)}
-            placeholder="R$"
+            placeholder="US$"
             w="100px"
             bg="Colors.softblue"
           />
@@ -98,7 +98,7 @@ export default function Conversor() {
         </Flex>
         <Flex flexDirection="column">
           <FormLabel p="4" m="auto" fontSize="3rem" color="white">
-            US$ {total.toFixed(2)}
+            R$ {total.toFixed(2)}
           </FormLabel>
           <img
             style={{
