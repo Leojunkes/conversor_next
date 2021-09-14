@@ -1,27 +1,24 @@
+# Junkes Conversor
+
 ## Preview
 
 <img src="./public/imagens/junkesConver.png" width="200" />
+<img src="./public/imagens/usdbrl.png" width="200"  />
+<img src="./public/imagens/eurobrl.png" width="200" />
 
 ## Tecnologias utilizadas no projeto
 
-<img width="400" src="public/imagens/tecnologias.png" />
-
-## Pages
-
-- Page Index -> página inicial é a de listagem de contatos de empresas.
-- Page companies -> página de listagem e cadastro de Empresas(Formulário).
-- Page Cadastrar -> página onde cadastramos contatos para empresas(Formulário)
-
+<img width="400" src="./public/imagens/tecnologias1.png" />
 
 ## Sobre
 
-Aplicação de cadastro(formulário) de empresas e seus contatos, exemplo: Em uma loja-varejo cadastramos uma empresa x no sistema, e somente 2 pessoas poderão comprar em nome dessa empresa, então cadastramos 2 pessoas no sistema em nome desta empresa. 
+Um conversor de moedas, simples e funcional, colocando em prática o que foi aprendido.
 
 ## Instalação
 
-Clone o repositório com ```git clone https://github.com/Leojunkes/br24_desafio```
+Clone o repositório com ```git clone https://github.com/Leojunkes/conversor_next```
 
-entre na pasta ```cd br24_desafio```
+entre na pasta ```cd conversor_next```
 
 rode ```npm install```ou```yarn```para instalar as dependências.
 
