@@ -2,7 +2,7 @@
 
 ## Preview
 
-<img src="./public/imagens/junkesConver.png" width="200" />
+<img src="./public/imagens/junkesConver.png" width="400" />
 <img src="./public/imagens/usdbrl.png" width="200"  />
 <img src="./public/imagens/eurobrl.png" width="200" />
 
