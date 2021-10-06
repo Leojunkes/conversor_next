@@ -20,8 +20,6 @@ export default function Conversor() {
     const total = moedaValor * dados.EUR_BRL;
     console.log(total);
     setTotal(total);
-    
-    
   }
   //Chamando a API
   useEffect(() => {
@@ -38,7 +36,12 @@ export default function Conversor() {
   const [total, setTotal] = useState(0);
   const [dados, setDados] = useState([]);
   return (
-    <>
+    <Flex
+      minHeight="100vh"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+    >
       <Flex height="4rem" bg="Colors.gray">
         <Tabs mt="2" variant="soft-rounded" colorScheme="none">
           <TabList ml="4">
@@ -114,6 +117,6 @@ export default function Conversor() {
           alt=""
         />
       </Flex>
-    </>
+    </Flex>
   );
 }

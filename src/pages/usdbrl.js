@@ -65,6 +65,7 @@ export default function Conversor() {
         pl="8px"
         pt="80px"
         flexDirection="column"
+        minHeight='100vh'
       >
         <img
           src="/imagens/usaFlag.png"
@@ -84,6 +85,9 @@ export default function Conversor() {
             placeholder="US$"
             w="100px"
             bg="Colors.softblue"
+            pattern="[0-9]+([,\.][0-9]+)?"
+            min="0"
+            step="any"
           />
           <Button
             border="none"
