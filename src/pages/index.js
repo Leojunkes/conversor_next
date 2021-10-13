@@ -2,7 +2,7 @@ import { Flex, Box, Grid, GridItem } from '@chakra-ui/react';
 
 export default function Home() {
   return (
-    <Flex minHeight='100vh' justifyContent='center' alignItems='center' flexDirection='column'>
+    <Flex justifyContent='center' alignItems='center' flexDirection='column'>
       <Flex
         borderRadius="8"
         color="Colors.gelo"

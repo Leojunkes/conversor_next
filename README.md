@@ -3,6 +3,9 @@
 ## Preview
 
 <img src="./public/imagens/junkesConver.png" width="400" />
+
+### Faça o teste aqui => [Junkes Conversor](https://junkes-conversor.vercel.app/)
+
 <img src="./public/imagens/usdbrl.png" width="200"  />
 <img src="./public/imagens/eurobrl.png" width="200" />
 

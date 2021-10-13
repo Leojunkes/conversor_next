@@ -36,13 +36,8 @@ export default function Conversor() {
   const [total, setTotal] = useState(0);
   const [dados, setDados] = useState([]);
   return (
-    <Flex
-      minHeight="100vh"
-      flexDirection="column"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Flex height="4rem" bg="Colors.gray">
+    <Flex flexDirection="column" justifyContent="center" alignItems="center">
+      <Flex width='100%' height="4rem" bg="Colors.gray">
         <Tabs mt="2" variant="soft-rounded" colorScheme="none">
           <TabList ml="4">
             <Stack direction="row" spacing="12px">

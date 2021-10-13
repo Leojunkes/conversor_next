@@ -65,7 +65,7 @@ export default function Conversor() {
         pl="8px"
         pt="80px"
         flexDirection="column"
-        minHeight='100vh'
+        
       >
         <img
           src="/imagens/usaFlag.png"
